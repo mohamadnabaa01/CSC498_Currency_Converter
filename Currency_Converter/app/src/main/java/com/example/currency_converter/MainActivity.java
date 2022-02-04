@@ -44,15 +44,12 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isNumeric(TextView amount_ll_text) {
         String amount = amount_ll_text.toString();
-        boolean result = false;
+        int amount_int;
         try {
-            int amount_int = Integer.parseInt(amount);
-            result = true;
+            amount_int = Integer.parseInt(amount);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
         }
-        catch (NumberFormatException e){
-            result = false;
-        }
-        return result;
     }
-
 }
