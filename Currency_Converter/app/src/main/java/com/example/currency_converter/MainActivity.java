@@ -20,15 +20,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void convert_amount(View v){
-        if(!isNumeric(amount_LL_text) && !isNumeric(amount_dollar_text)){
+        if(!isNumeric(amount_LL_text.getText().toString()) && !isNumeric(amount_dollar_text.getText().toString())){
             Toast.makeText(getApplicationContext(), "Enter numeric values only", Toast.LENGTH_LONG);
         }
-        else if(isNumeric(amount_LL_text) && !isNumeric(amount_dollar_text)){
+        else if(isNumeric(amount_LL_text.getText().toString()) && !isNumeric(amount_dollar_text.getText().toString())){
             amount_dollar_text.setText(Integer.parseInt(amount_LL_text.toString()) / 22000);
             Toast.makeText(getApplicationContext(), "The amount in L.L was converted into dollars", Toast.LENGTH_LONG);
         }
-        else if(!isNumeric(amount_LL_text) && isNumeric(amount_dollar_text)){
-            amount_dollar_text.setText(Integer.parseInt(amount_dollar_text.toString()) * 22000);
+        else if(!isNumeric(amount_LL_text.getText().toString()) && isNumeric(amount_dollar_text.getText().toString())){
+            amount_dollar_text.setText(Integer.parseInt(amount_dollar_text.getText().toString()) * 22000);
             Toast.makeText(getApplicationContext(), "The amount in dollars was converted into L.L.", Toast.LENGTH_LONG);
         }
         else{//if both dollars and LL were numeric
@@ -42,11 +42,10 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "Values were reset", Toast.LENGTH_LONG);
     }
 
-    private boolean isNumeric(TextView amount_ll_text) {
-        String amount = amount_ll_text.toString();
+    private boolean isNumeric(String text) {
         int amount_int;
         try {
-            amount_int = Integer.parseInt(amount);
+            amount_int = Integer.parseInt(text);
             return true;
         } catch (NumberFormatException e) {
             return false;
