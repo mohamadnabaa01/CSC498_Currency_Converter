@@ -8,9 +8,57 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="121dp"
-        android:layout_height="144dp"
+        android:layout_width="84dp"
+        android:layout_height="128dp"
         app:srcCompat="@drawable/img1"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="76dp" />
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <TextView
+        android:id="@+id/dollar_nb"
+        android:layout_width="112dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="566dp"
+        android:text="1$"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/LL_nb"
+        android:layout_width="123dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="566dp"
+        android:text="22,000 L.L"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="294dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
