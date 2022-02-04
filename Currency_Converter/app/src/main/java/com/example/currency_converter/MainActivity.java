@@ -24,11 +24,13 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Enter numeric values only", Toast.LENGTH_LONG);
         }
         else if(isNumeric(amount_LL_text.getText().toString()) && !isNumeric(amount_dollar_text.getText().toString())){
-            amount_dollar_text.setText(Integer.parseInt(amount_LL_text.toString()) / 22000);
+            int new_amount = Integer.parseInt(amount_LL_text.getText().toString()) / 22000;
+            amount_dollar_text.setText(Integer.toString(new_amount));
             Toast.makeText(getApplicationContext(), "The amount in L.L was converted into dollars", Toast.LENGTH_LONG);
         }
         else if(!isNumeric(amount_LL_text.getText().toString()) && isNumeric(amount_dollar_text.getText().toString())){
-            amount_LL_text.setText(Integer.parseInt(amount_dollar_text.getText().toString()) * 22000);
+            int new_amount = Integer.parseInt(amount_dollar_text.getText().toString()) * 22000;
+            amount_LL_text.setText(Integer.toString(new_amount));
             Toast.makeText(getApplicationContext(), "The amount in dollars was converted into L.L.", Toast.LENGTH_LONG);
         }
         else{//if both dollars and LL were numeric
