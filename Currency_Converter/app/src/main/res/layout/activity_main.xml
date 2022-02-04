@@ -107,6 +107,7 @@
         android:layout_height="62dp"
         android:layout_marginTop="40dp"
         android:background="#FFFFFF"
+        android:onClick="reset"
         android:text="Reset"
         android:textAlignment="center"
         android:textSize="24sp"

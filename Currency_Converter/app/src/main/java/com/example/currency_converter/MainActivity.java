@@ -34,7 +34,12 @@ public class MainActivity extends AppCompatActivity {
         else{//if both dollars and LL were numeric
             Toast.makeText(getApplicationContext(), "Please enter the amount of either dollars or L.L to convert", Toast.LENGTH_LONG);
         }
+    }
 
+    public void reset(View v){
+        amount_dollar_text.setText("Amount in Dollars $");
+        amount_LL_text.setText("Amount in L.L");
+        Toast.makeText(getApplicationContext(), "Values were reset", Toast.LENGTH_LONG);
     }
 
     private boolean isNumeric(TextView amount_ll_text) {
